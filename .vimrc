@@ -30,7 +30,7 @@ Plugin 'scrooloose/nerdtree' " nerdtree file browser
 Plugin 'kien/ctrlp.vim'      " ctrlp
 
 " complete
-" Plugin 'Valloric/YouCompleteMe'
+Plugin 'Valloric/YouCompleteMe'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'ervandew/supertab' " SuperTab
@@ -59,8 +59,15 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
 
 " Search
-Plugin 'mileszs/ack.vim'
+Plugin 'mileszs/ack.vim' " need to install ag
 
+" python
+" need to install
+Plugin 'davidhalter/jedi-vim'
+
+" verilog
+Plugin 'vhda/verilog_systemverilog.vim'
+Plugin 'antoinemadec/vim-verilog-instance'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -233,6 +240,10 @@ filetype plugin indent on    " required
     if executable('ag')
         let g:ackprg = 'ag --vimgrep'
     endif
+" }
+
+" verilog {
+    " verilog setting
 " }
 
 " EasyAlign {
