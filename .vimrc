@@ -132,6 +132,7 @@ filetype plugin indent on    " required
 
     " set the airline alway show!
     set laststatus=2
+    set ttimeoutlen=10 " set the leave time frome insert(make it more quick)
     let g:airline_theme = 'powerlineish'
 
     " search
