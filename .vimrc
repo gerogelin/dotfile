@@ -221,8 +221,8 @@ filetype plugin indent on    " required
 
         " Search
         map / <Plug>(easymotion-sn)
-        map n <Plug>(easymotion-next)
-        map N <Plug>(easymotion-prev)
+        " map n <Plug>(easymotion-next)
+        " map N <Plug>(easymotion-prev)
 
     " }
 " }
