@@ -63,6 +63,7 @@ Plugin 'mileszs/ack.vim' " need to install ag
 
 " python
 " need to install
+Plugin 'python-mode/python-mode'
 Plugin 'davidhalter/jedi-vim'
 
 " verilog
@@ -82,6 +83,8 @@ filetype plugin indent on    " required
     " file encoding
     set encoding=utf-8
     set fileencodings=utf-8,chinese,latin-1
+    set fileformat=unix
+    set fileformats=unix,dos
 " }
 
 
