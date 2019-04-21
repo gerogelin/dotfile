@@ -14,65 +14,60 @@ endfunction
 command! ZoomToggle call s:ZoomToggle()
 
 set nocompatible
-filetype off                  " required
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin('~/.vim/bundle')
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
+" update plugin manager to vim-plug
+call plug#begin('~/.vim/bundle')
 
 " file manager
-Plugin 'scrooloose/nerdtree' " nerdtree file browser
-Plugin 'kien/ctrlp.vim'      " ctrlp
+Plug 'scrooloose/nerdtree' " nerdtree file browser
+Plug 'kien/ctrlp.vim'      " ctrlp
 
 " complete
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'SirVer/ultisnips'
-Plugin 'honza/vim-snippets'
-Plugin 'ervandew/supertab' " SuperTab
+Plug 'Valloric/YouCompleteMe'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+Plug 'ervandew/supertab' " SuperTab
 
 " UI
-Plugin 'bling/vim-airline'                " airline & its themes
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'altercation/vim-colors-solarized' " colorscheme
-Plugin 'nlknguyen/papercolor-theme'
-Plugin 'nathanaelkane/vim-indent-guides'  " show the indent
+Plug 'bling/vim-airline'                " airline & its themes
+Plug 'vim-airline/vim-airline-themes'
+Plug 'altercation/vim-colors-solarized' " colorscheme
+Plug 'nlknguyen/papercolor-theme'
+Plug 'nathanaelkane/vim-indent-guides'  " show the indent
 
 " Editor general
-Plugin 'easymotion/vim-easymotion'       " easymotion & easy-align
-Plugin 'junegunn/vim-easy-align'
-Plugin 'scrooloose/nerdcommenter'        " comment
-Plugin 'majutsushi/tagbar'               " Tag
-Plugin 'bronson/vim-trailing-whitespace' " cut white
-Plugin 'terryma/vim-multiple-cursors'    " multi cursor select
-Plugin 'jiangmiao/auto-pairs'            " auto pairs
+Plug 'easymotion/vim-easymotion'       " easymotion & easy-align
+Plug 'junegunn/vim-easy-align'
+Plug 'scrooloose/nerdcommenter'        " comment
+Plug 'majutsushi/tagbar'               " Tag
+Plug 'bronson/vim-trailing-whitespace' " cut white
+Plug 'terryma/vim-multiple-cursors'    " multi cursor select
+Plug 'jiangmiao/auto-pairs'            " auto pairs
 
 " markdown enchance
-Plugin 'plasticboy/vim-markdown'
+Plug 'plasticboy/vim-markdown'
+
+" latex "
+Plug 'lervag/vimtex'
 
 " Git
-Plugin 'tpope/vim-fugitive'
-Plugin 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
 
 " Search
-Plugin 'mileszs/ack.vim' " need to install ag
+Plug 'mileszs/ack.vim' " need to install ag
 
 " python
 " need to install
-Plugin 'python-mode/python-mode'
-Plugin 'davidhalter/jedi-vim'
+Plug 'python-mode/python-mode'
+Plug 'davidhalter/jedi-vim'
 
 " verilog
-Plugin 'vhda/verilog_systemverilog.vim'
-Plugin 'antoinemadec/vim-verilog-instance'
+Plug 'vhda/verilog_systemverilog.vim'
+Plug 'antoinemadec/vim-verilog-instance'
 
 " All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
+call plug#end()            " required
 
 " file {
     "set color
