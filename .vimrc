@@ -21,6 +21,7 @@ call plug#begin('~/.vim/bundle')
 " file manager
 Plug 'scrooloose/nerdtree' " nerdtree file browser
 Plug 'kien/ctrlp.vim'      " ctrlp
+Plug 'alpertuna/vim-header' "auto header
 
 " complete
 Plug 'Valloric/YouCompleteMe'
@@ -259,4 +260,10 @@ call plug#end()            " required
     \     'delimiter_align': 'r'
     \    }
     \ }
+" }
+
+" Header {
+    let g:header_field_author = 'George Lin'
+    let g:header_field_author_email = 'lyssan10@gmail.com'
+    let g:header_auto_add_header = 0
 " }
