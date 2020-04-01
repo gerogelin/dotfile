@@ -81,6 +81,7 @@ call plug#end()            " required
     set fileencodings=utf-8,chinese,latin-1
     set fileformat=unix
     set fileformats=unix,dos
+    set foldmethod=syntax
 " }
 
 
@@ -155,6 +156,9 @@ call plug#end()            " required
     " set leader
     let mapleader=';'
 
+    " unuse esc
+    inoremap jj <esc>
+
     " open a nerdtree when start
     nmap <silent> <F2> :NERDTreeToggle<CR>
 
@@ -163,6 +167,7 @@ call plug#end()            " required
 
     " Tagbar
     nmap <silent> <F8> :TagbarToggle<CR>
+    set cscopetag
 
     " set short-key
     noremap j gj
@@ -203,7 +208,8 @@ call plug#end()            " required
     " Whitefix
     nnoremap <Leader>xw :FixWhitespace<CR>
 
-    vmap <Enter> <Plug>(EasyAlign)
+    xmap <Enter> <Plug>(EasyAlign)
+    vnoremap <silent> <leader>ll :EasyAlign */[(\|)]/<CR>
 
     " easymotion {
         let g:EasyMotion_do_mapping = 0 " Disable default mappings
@@ -236,7 +242,7 @@ call plug#end()            " required
     let g:SuperTabDefaultCompletionType = '<C-n>'
 
     " better key bindings for UltiSnipsExpandTrigger
-    let g:UltiSnipsExpandTrigger = "<tab>"
+    let g:UltiSnipsExpandTrigger = "<C-j>"
     let g:UltiSnipsJumpForwardTrigger = "<tab>"
     let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 " }
@@ -245,10 +251,24 @@ call plug#end()            " required
     if executable('ag')
         let g:ackprg = 'ag --vimgrep'
     endif
+
+    vnoremap gs y:Ack <C-R>"<CR>
 " }
 
 " verilog {
     " verilog setting
+    let g:verilog_indent_width = 4
+    let g:verilog_efm_quickfix_clean = 1
+
+    " verilog_instance
+    let g:verilog_instance_ship_last_coma = 1
+    let g:verilog_syntax_fold_lst = "function,task,block,comment,define,instance"
+
+    "autocmd BufNewFile *.v exec ":call SetVerilogHeader()"
+    "autocmd BufNewFile *.v exec ":call SetVerilogHeader()"
+    "autocmd filetype verilog_systemverilog compiler iverilog
+    "autocmd filetype verilog_systemverilog exec ":set makeprg=iverilog\\ %"
+
 " }
 
 " EasyAlign {
