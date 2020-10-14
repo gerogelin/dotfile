@@ -22,6 +22,7 @@ call plug#begin('~/.vim/bundle')
 Plug 'scrooloose/nerdtree' " nerdtree file browser
 Plug 'kien/ctrlp.vim'      " ctrlp
 Plug 'alpertuna/vim-header' "auto header
+Plug 'will133/vim-dirdiff'
 
 " complete
 Plug 'Valloric/YouCompleteMe'
@@ -60,12 +61,18 @@ Plug 'mileszs/ack.vim' " need to install ag
 
 " python
 " need to install
-Plug 'python-mode/python-mode'
+" Plug 'python-mode/python-mode'
 Plug 'davidhalter/jedi-vim'
+
+" c/c++
+Plug 'drmikehenry/vim-headerguard'
 
 " verilog
 Plug 'vhda/verilog_systemverilog.vim'
 Plug 'antoinemadec/vim-verilog-instance'
+
+" wiki
+" Plug 'vimwiki/vimwiki'
 
 " All of your Plugins must be added before the following line
 call plug#end()            " required
@@ -75,6 +82,7 @@ call plug#end()            " required
     syntax enable
     set nobackup
     set smartindent
+    filetype plugin on
 
     " file encoding
     set encoding=utf-8
@@ -271,6 +279,10 @@ call plug#end()            " required
 
 " }
 
+" c/c++ {
+    autocmd BufNewFile *.{h,hpp} exec ":HeaderguardAdd"
+" }
+
 " EasyAlign {
     let g:easy_align_delimiters = {
     \ 'd': {
@@ -286,4 +298,14 @@ call plug#end()            " required
     let g:header_field_author = 'George Lin'
     let g:header_field_author_email = 'lyssan10@gmail.com'
     let g:header_auto_add_header = 0
+    autocmd BufNewFile *.{h,c,cpp,hpp,v,sv,py} exec ":AddHeader"
+" }
+
+" tex {
+  let g:tex_flavor = 'latex'
+" }
+
+" wiki {
+    let g:wiki_folding = 'list'
+    map <leader>d <Plug>(VimwikiToggleListItem)
 " }
