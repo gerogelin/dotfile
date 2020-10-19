@@ -14,3 +14,5 @@
 [alias]
     ll = log --color --graph --pretty=format:'%Cgreen(%cd) %C(yellow)%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>'
     st = status
+[merge]
+    conflictstyle = diff3
