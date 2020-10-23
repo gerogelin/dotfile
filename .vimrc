@@ -71,6 +71,9 @@ Plug 'drmikehenry/vim-headerguard'
 Plug 'vhda/verilog_systemverilog.vim'
 Plug 'antoinemadec/vim-verilog-instance'
 
+" scala
+Plug 'derekwyatt/vim-scala'
+
 " wiki
 " Plug 'vimwiki/vimwiki'
 
@@ -172,6 +175,7 @@ call plug#end()            " required
 
     " ctags
     nmap <silent> <F7> :!ctags -R .<CR>
+    set tags=./tags;,tags;
 
     " Tagbar
     nmap <silent> <F8> :TagbarToggle<CR>
