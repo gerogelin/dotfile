@@ -68,8 +68,12 @@ Plug 'davidhalter/jedi-vim'
 Plug 'drmikehenry/vim-headerguard'
 
 " verilog
-Plug 'vhda/verilog_systemverilog.vim'
+"Plug 'vhda/verilog_systemverilog.vim'
 Plug 'antoinemadec/vim-verilog-instance'
+Plug 'azidar/firrtl-syntax'
+
+" session (cooperate with tmux)
+Plug 'tpope/vim-obsession'
 
 " scala
 Plug 'derekwyatt/vim-scala'
@@ -237,7 +241,7 @@ call plug#end()            " required
         map <Leader>jk <Plug>(easymotion-overwin-line)
 
         " Search
-        map / <Plug>(easymotion-sn)
+        " map / <Plug>(easymotion-sn)
         " map n <Plug>(easymotion-next)
         " map N <Plug>(easymotion-prev)
 
@@ -269,8 +273,8 @@ call plug#end()            " required
 
 " verilog {
     " verilog setting
-    let g:verilog_indent_width = 4
-    let g:verilog_efm_quickfix_clean = 1
+    "let g:verilog_indent_width = 4
+    "let g:verilog_efm_quickfix_clean = 1
 
     " verilog_instance
     let g:verilog_instance_ship_last_coma = 1
