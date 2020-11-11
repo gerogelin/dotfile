@@ -18,7 +18,10 @@ su -
 PACKTOOL=apt
 cd /home/$CS
 mkdir -p .vim/bundle
-$PACKTOOL install vim the_silver_searcher silversearcher-ag git zsh
+mkdir -p .tmux/plugins
+$PACKTOOL install vim the_silver_searcher silversearcher-ag git zsh tmux
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 while true; do
     read -p "Do you wish to locate the vivado?" yn
