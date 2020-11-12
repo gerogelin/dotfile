@@ -179,7 +179,7 @@ call plug#end()            " required
 
     " ctags
     nmap <silent> <F7> :!ctags -R .<CR>
-    set tags=./tags;,tags;
+    set tags=tags;/
 
     " Tagbar
     nmap <silent> <F8> :TagbarToggle<CR>
@@ -268,7 +268,7 @@ call plug#end()            " required
         let g:ackprg = 'ag --vimgrep'
     endif
 
-    vnoremap gs y:Ack <C-R>"<CR>
+    nnoremap gs :Ack <C-R>=expand("<cword>")<CR><CR>
 " }
 
 " verilog {
