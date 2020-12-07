@@ -16,3 +16,5 @@
     st = status
 [merge]
     conflictstyle = diff3
+[url "https://hub.fastgit.org"]
+	insteadOf = https://github.com
