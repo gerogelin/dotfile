@@ -217,6 +217,12 @@ call plug#end()            " required
     nnoremap <silent> <Leader>gl :Glog<CR>
     nnoremap <silent> <Leader>gd :Gdiff<CR>
 
+    " quickfix
+    nnoremap <silent> <Leader>kn :cnext<CR>
+    nnoremap <silent> <Leader>kp :cprevious<CR>
+    nnoremap <silent> <Leader>kl :clast<CR>
+    nnoremap <silent> <Leader>kf :cfirst<CR>
+
     " visual shifting
     vnoremap < <gv
     vnoremap > >gv
