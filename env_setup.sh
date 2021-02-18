@@ -16,9 +16,13 @@ echo "current user $CS"
 echo "require super user to install all package needed"
 # TODO this is for ubuntu usage
 PACKTOOL=apt
-cd /home/$CS
-mkdir -p .vim/bundle
-mkdir -p .tmux/plugins
+# call file to update
+./update.sh tohome
+mkdir -p ~/.vim/bundle
+mkdir -p ~/.tmux/plugins
+mkdir -p ~/.ssh/
+cp -f .sshconfig ~/.ssh/config
+ssh-keygen
 # update to make sure the dependencies is update-to-date
 sudo $PACKTOOL update
 # install the dependencies
