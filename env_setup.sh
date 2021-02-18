@@ -14,14 +14,19 @@ add_vivado()
 CS=`whoami`
 echo "current user $CS"
 echo "require super user to install all package needed"
-su -
+# TODO this is for ubuntu usage
 PACKTOOL=apt
 cd /home/$CS
 mkdir -p .vim/bundle
 mkdir -p .tmux/plugins
-$PACKTOOL install vim the_silver_searcher silversearcher-ag git zsh tmux
+# update to make sure the dependencies is update-to-date
+sudo $PACKTOOL update
+# install the dependencies
+sudo $PACKTOOL install cmake build-essential python3-dev
+sudo $PACKTOOL install vim git zsh tmux silversearcher-ag
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+vim -c "PlugInstall"
 
 while true; do
     read -p "Do you wish to locate the vivado?" yn
