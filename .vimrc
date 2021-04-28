@@ -271,9 +271,10 @@ call plug#end()            " required
 
 " Search {
     if executable('ag')
-        let g:ackprg = 'ag --vimgrep'
+        let g:ackprg = 'ag -w --vimgrep'
     endif
 
+    nnoremap gc :Ack \\.<C-R>=expand("<cword>")<CR><CR>
     nnoremap gs :Ack <C-R>=expand("<cword>")<CR><CR>
 " }
 
@@ -291,6 +292,11 @@ call plug#end()            " required
     "autocmd filetype verilog_systemverilog compiler iverilog
     "autocmd filetype verilog_systemverilog exec ":set makeprg=iverilog\\ %"
 
+    autocmd BufNewFile,BufRead *.xdc set ft=tcl
+
+    nnoremap <silent> <Leader>is :VerilogGotoInstanceStart<CR>
+    nnoremap <silent> <Leader>id :VerilogFollowInstance<CR>
+    nnoremap <silent> <Leader>ip :VerilogFollowPort<CR>
 " }
 
 " c/c++ {
