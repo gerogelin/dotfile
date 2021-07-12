@@ -78,6 +78,8 @@ if [[ $1 == "scala" || $1 == "all" ]]; then
     curl -sL "https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x2EE0EA64E40A89B84B2DF73499E82A75642AC823" | sudo apt-key add
     sudo apt-get update
     sudo apt-get install sbt
+    mkdir -p ~/.sbt/
+    cp -f .sbtrepo ~/.sbt/repositories
 fi
 
 if [[ $1 == "sim" || $1 == "all" ]]; then
