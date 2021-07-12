@@ -79,3 +79,8 @@ if [[ $1 == "scala" || $1 == "all" ]]; then
     sudo apt-get update
     sudo apt-get install sbt
 fi
+
+if [[ $1 == "sim" || $1 == "all" ]]; then
+    sudo apt-get install pip iverilog
+    pip install cocotb
+fi
