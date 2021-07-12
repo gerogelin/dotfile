@@ -51,7 +51,7 @@ fi
 if [[ $1 == "zsh" || $1 == "all" ]]; then
     # setup the zsh
     git clone git@github.com:ohmyzsh/ohmyzsh.git ~/.oh-my-zsh
-    cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
+    # cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
     chsh -s $(which zsh)
 fi
 
