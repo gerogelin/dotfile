@@ -294,9 +294,9 @@ call plug#end()            " required
 
     autocmd BufNewFile,BufRead *.xdc set ft=tcl
 
-    nnoremap <silent> <Leader>is :VerilogGotoInstanceStart<CR>
-    nnoremap <silent> <Leader>id :VerilogFollowInstance<CR>
-    nnoremap <silent> <Leader>ip :VerilogFollowPort<CR>
+    nnoremap <silent> <Leader>ms :VerilogGotoInstanceStart<CR>
+    nnoremap <silent> <Leader>md :VerilogFollowInstance<CR>
+    nnoremap <silent> <Leader>mp :VerilogFollowPort<CR>
 " }
 
 " c/c++ {
