@@ -45,6 +45,7 @@ Plug 'majutsushi/tagbar'               " Tag
 Plug 'bronson/vim-trailing-whitespace' " cut white
 Plug 'terryma/vim-multiple-cursors'    " multi cursor select
 Plug 'jiangmiao/auto-pairs'            " auto pairs
+Plug 'adelarsq/vim-matchit'            " % extend
 
 " markdown enchance
 Plug 'plasticboy/vim-markdown'
