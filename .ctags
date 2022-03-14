@@ -14,7 +14,7 @@
 --exclude=*.tar.*
 
 --langdef=systemverilog
---langmap=systemverilog:.v.vg.sv.svh.tv.vinc
+--langmap=systemverilog:.vg.sv.svh.tv.vinc
 
 --regex-systemverilog=/^\s*(\b(static|local|virtual|protected)\b)*\s*\bclass\b\s*(\b\w+\b)/\3/c,class/
 --regex-systemverilog=/^\s*(\b(static|local|virtual|protected)\b)*\s*\btask\b\s*(\b(static|automatic)\b)?\s*(\w+::)?\s*(\b\w+\b)/\6/t,task/
