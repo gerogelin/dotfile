@@ -21,6 +21,7 @@ if [[ $1 == "pre" || $1 == "all" ]]; then
     # call file to update
     ./update.sh tohome
     mkdir -p ~/.vim/bundle
+    mkdir -p ~/.vim/autoload
     mkdir -p ~/.tmux/plugins
     mkdir -p ~/.ssh/
     cp -f .sshconfig ~/.ssh/config
@@ -34,11 +35,14 @@ fi
 
 if [[ $1 == "tmux" || $1 == "all" ]]; then
     # TODO use https instead of the ssh, make sure there are timeout mechanism
+    mkdir -p ~/.tmux/plugins
     git clone git@github.com:tmux-plugins/tpm ~/.tmux/plugins/tpm
 fi
 
 if [[ $1 == "vim" || $1 == "all" ]]; then
     #curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    mkdir -p ~/.vim/bundle
+    mkdir -p ~/.vim/autoload
     git clone git@github.com:junegunn/vim-plug
     cp vim-plug/plug.vim ~/.vim/autoload/plug.vim
     rm -rf vim-plug
